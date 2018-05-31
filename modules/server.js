@@ -17,14 +17,16 @@ function start () {
             case '/upload':
                 handlers.upload(request, response);
                 break;
-            default:
-                handlers.error(request, response);
+            case '/show':
+                handlers.show(request, response);
+//            default:
+//                handlers.error(request, response);
         }
     }
 
-http.createServer(onRequest).listen(9000);
+    http.createServer(onRequest).listen(9000);
 
-console.log('Uruchomiono server!'.green);
+    console.log('Uruchomiono server!'.green);
 }
 
 exports.start = start;
