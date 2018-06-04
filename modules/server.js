@@ -5,7 +5,7 @@ const handlers = require('./handlers');
 function start () {
     function onRequest(request, response) {
         console.log('Odebrano zapytanie');
-        console.log('Zapytanie ' + request.url + 'odebrane.');
+        console.log('Zapytanie ' + request.url + ' odebrane.');
         
         response.writeHead(200, {'Content-Type': 'text/plain; charset=utf-8'});
         
@@ -16,7 +16,7 @@ function start () {
                 break;
             case '/upload':
                 handlers.upload(request, response);
-                break;
+                break; 
             case '/show':
                 handlers.show(request, response);
 //            default:
