@@ -22,16 +22,26 @@ exports.welcome = function(request, response) {
     });
 };
 
+exports.style = function(request, response) {
+    console.log('Rozpoczynam obsługę żądania style.'.green);
+    fs.readFile('css/style.css', function(err, css) {
+        response.writeHead(200, {'Content-Type': 'text/css; charset=utf-8'});
+        response.write(css);
+        response.end();
+    });
+};
+
 exports.show = function(request, response) {
     fs.readFile('test.png', 'binary', function (error, file) {
+        console.log('Rozpoczynam obsługę żądania show.'.green);
         response.writeHead(200, {'Content-Type': 'image/png'});
         response.write(file, 'binary');
         response.end();
     });
 };
 
-//exports.error = function (request, response) {
-//  console.log('Błąd'.red);
-//  response.write('404');
-//  response.end();
-//};
+exports.error = function (request, response) {
+    console.log('Błąd'.red);
+    response.write('404');
+    response.end();
+};
