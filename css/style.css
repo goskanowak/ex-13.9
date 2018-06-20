@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin-ext");
+body {
+  font-family: "Open Sans", sans-serif;
+  text-align: left;
+  margin-left: 5%; }
+
+.form__file {
+  margin: 15px 0; }
+
+.form__title {
+  margin: 5px 0; }
+
+.form__add {
+  padding: 15px 0; }
+
+.form__send {
+  margin-top: 15px;
+  width: 150px;
+  padding: 5px;
+  font-size: 18px;
+  font-weight: 600; }
+
+h1 {
+  font-size: 25px; }
+
+/*# sourceMappingURL=style.css.map */
